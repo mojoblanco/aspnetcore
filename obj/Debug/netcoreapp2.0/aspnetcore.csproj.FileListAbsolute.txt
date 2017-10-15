@@ -9,3 +9,4 @@
 /Users/moj/Dev/ASP/aspnetcore/obj/Debug/netcoreapp2.0/aspnetcore.AssemblyInfo.cs
 /Users/moj/Dev/ASP/aspnetcore/obj/Debug/netcoreapp2.0/aspnetcore.dll
 /Users/moj/Dev/ASP/aspnetcore/obj/Debug/netcoreapp2.0/aspnetcore.pdb
+/Users/moj/Dev/ASP/aspnetcore/bin/Debug/netcoreapp2.0/app.db

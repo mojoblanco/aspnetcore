@@ -36,11 +36,14 @@ namespace aspnetcore
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            // Initialize DB
+            services.AddScoped<IDbInitializer, DbInitializer>();
+
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -55,6 +58,10 @@ namespace aspnetcore
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            
+            dbInitializer.Initialize();
+
 
             app.UseMvc(routes =>
             {
