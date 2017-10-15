@@ -23,5 +23,14 @@ namespace aspnetcore.Models.AccountViewModels
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name="Full Name")]
+        [Required]
+        public string Name { get; set; }
+
+        [Display(Name="Date of Birth")]
+        [Required]
+        [DataType(DataType.Date)]
+        public DateTime? DOB { get; set; }
     }
 }
